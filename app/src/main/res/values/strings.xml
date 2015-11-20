@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">DestinationVN</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="drawer_open">Slider Menu Opened</string>
+    <string name="drawer_close">Slider Menu Closed</string>
+    <string name="prompt_filter">What do you want to search?</string>
+    <string name="from">From</string>
+    <string name="to">To</string>
+    <string name="load_directions">Load directions</string>
+
+    <!-- Nav Drawer Menu Items -->
+    <string-array name="nav_drawer_items">
+        <item>Home</item>
+        <item>Direction</item>
+        <item>Top tour</item>
+        <item>Remind</item>
+        <item>Information</item>
+        <item>Map</item>
+        <item>Setting</item>
+    </string-array>
+
+    <string-array name="filter">
+        <item>Places</item>
+        <item>Hotel</item>
+        <item>Restaurant</item>
+        <item>Hospital</item>
+        <item>Gas Station</item>
+        <item>ATM</item>
+    </string-array>
+    <!-- Nav Drawer List Item Icons -->
+    <!-- Keep them in order as the titles are in -->
+    <array name="nav_drawer_icons">
+        <item>@drawable/ic_home</item>
+        <item>@drawable/ic_direct</item>
+        <item>@drawable/ic_toptour</item>
+        <item>@drawable/ic_remind</item>
+        <item>@drawable/ic_information</item>
+        <item>@drawable/ic_map</item>
+        <item>@drawable/ic_setting</item>
+
+    </array>
+
+    <!-- Content Description -->
+    <string name="desc_list_item_icon">Item Icon</string>
+    // filter by city
+    <string name="selectByFilter">Search</string>
+    <string name="title_activity_maps">Map</string>
+</resources>
