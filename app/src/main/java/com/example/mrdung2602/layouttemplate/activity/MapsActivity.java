@@ -469,16 +469,19 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     @OnClick(R.id.btn_Search)
     public void searchRequest() {
         if (Util.Operations.isOnline(this)) {
+            map.clear();
             // Flat markers will rotate when the map is rotated,
             // and change perspective when the map is tilted.
-            map.moveCamera(CameraUpdateFactory.newLatLngZoom(address, 16));
+            map.moveCamera(CameraUpdateFactory.newLatLngZoom(address, 18));
 
             // You can customize the marker image using images bundled with
             // your app, or dynamically generated bitmaps.
             map.addMarker(new MarkerOptions()
                     .icon(BitmapDescriptorFactory.fromResource(R.drawable.marker))
-                    .anchor(0.0f, 1.0f) // Anchors the marker on the bottom left
+                    .anchor(1.0f, 0.0f) // Anchors the marker on the bottom left
                     .position(address));
+
+
 
 
         } else {
@@ -663,6 +666,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     @Override
     public void onRoutingStart() {
         // The Routing Request starts
+        map.clear();
     }
 
     @Override
