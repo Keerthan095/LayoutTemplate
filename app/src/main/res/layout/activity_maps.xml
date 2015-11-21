@@ -36,7 +36,6 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_weight="0.05"
-            android:onClick="onDelete"
             android:src="@drawable/icon_delete" />
     </LinearLayout>
 

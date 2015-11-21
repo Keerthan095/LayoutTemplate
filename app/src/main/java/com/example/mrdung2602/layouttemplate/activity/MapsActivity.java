@@ -73,7 +73,6 @@ import butterknife.OnClick;
 public class MapsActivity extends AppCompatActivity implements OnMapReadyCallback, AdapterView.OnItemClickListener, RoutingListener, GoogleApiClient.OnConnectionFailedListener, GoogleApiClient.ConnectionCallbacks {
 
     private GoogleMap map;
-    private AutoCompleteTextView textLocation;
     private FrameLayout frameLayout;
     private String urlPalce = "https://maps.googleapis.com/maps/api/place/textsearch/json?query=";
     private String urlPalceAutoCom = "https://maps.googleapis.com/maps/api/place/autocomplete/json?input=";
@@ -82,7 +81,6 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     protected LatLng start;
     protected LatLng end;
     protected LatLng address;
-    //    @InjectView(R.id.start)
     @Bind(R.id.start)
     AutoCompleteTextView starting;
     @Bind(R.id.destination)
@@ -482,8 +480,6 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
                     .position(address));
 
 
-
-
         } else {
             Toast.makeText(this, "No internet connectivity",
                     Toast.LENGTH_SHORT).show();
@@ -531,7 +527,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     }
 
 
-//    public void onSearch(View view) {
+    //    public void onSearch(View view) {
 //        String location = textLocation.getText().toString();
 //        String urlPalceJson = urlPalce + location + keyPlace;
 //        hashMap = new HashMap<String, String>();
@@ -540,9 +536,9 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 //            makePlaceJsonObjectRequest(urlPalceJson);
 //        }
 //}
-
+    @OnClick(R.id.btn_Delete)
     public void onDelete(View view) {
-        textLocation.getText().clear();
+        addressing.getText().clear();
     }
 
     private Location getMyLocation() {
